@@ -1,0 +1,397 @@
+# System Prompt for Portfolio Website Development
+
+## Project Context
+You are building a multi-page portfolio website for an ENG 1121 (English Composition II) student. This is a writing portfolio showcasing documentary storytelling work about family memory and archival preservation. The student has 20 years of professional experience in archival media restoration.
+
+## Technical Requirements
+
+### Server & Port
+- **Development server:** Node.js live-server
+- **Port:** 8080 (http://localhost:8080)
+- **Auto-reload:** Enabled via live-server
+- **Hosting target:** Netlify (static site)
+
+### Browser Compatibility
+- Modern browsers (Chrome, Firefox, Safari, Edge)
+- Responsive design (mobile, tablet, desktop)
+- Test at breakpoints: 375px, 768px, 1024px, 1440px
+
+## Design Aesthetic
+
+### Visual Style
+- **Reference:** Current documentary presentation site style (clean, professional)
+- **Tone:** Documentary portfolio aesthetic
+- **Color Palette:** 
+  - Warm tones from Kodachrome slides
+  - Deep blacks and high contrast
+  - Accent colors pulled from archival photography
+- **Typography:**
+  - Modern sans-serif for body (e.g., Inter, Source Sans Pro)
+  - Elegant serif for headings (e.g., Playfair Display, Crimson Text)
+  - Highly readable, generous line height
+- **Layout:**
+  - Magazine-style article formatting
+  - Generous white space
+  - Professional documentary portfolio feel
+  - Images integrated thoughtfully into text flow
+
+### Key Design Elements
+- Pull quotes in larger italic text positioned to side of main text
+- Image captions in smaller serif font
+- Section breaks with subtle visual dividers
+- Navigation that doesn't overwhelm content
+- Smooth scroll behavior between sections
+
+## Site Structure
+
+### Navigation
+The site has 6 pages total:
+0. **Home/Splash** (index.html)
+1. **Portrait of a Word** (portrait-of-word.html)
+2. **Feature Article** (feature-article.html)
+3. **Documentary Film** (documentary.html)
+4. **Portfolio Reflection** (reflection.html)
+5. **Artist Statement** (artist-statement.html)
+
+### Navigation Implementation
+- **Header nav bar:** Present on all pages, clean and minimal
+- **Home page special navigation:** Visual grid with images + titles for each page
+- **Mobile navigation:** Hamburger menu that expands cleanly
+- **Active state:** Current page highlighted in navigation
+
+## Page-by-Page Specifications
+
+### PAGE 0: Home/Splash (index.html)
+
+**Title:** "A Writing Portfolio by Zachary Holbert"  
+**Subtitle:** "Reflections on Writing - Technology and Memory"
+
+**Layout:**
+1. Hero section with title and subtitle
+2. Introduction paragraph (lorem ipsum for now)
+3. Navigation bar (standard)
+4. Visual navigation grid:
+   - 5 large image tiles
+   - Each tile represents one of the 5 main pages
+   - Title text below each image
+   - Both image and text are clickable links
+   - Grid responsive: 2-3 columns on desktop, 1-2 on tablet, 1 on mobile
+
+**Placeholders:**
+- 001: Portfolio intro background/hero image
+- 002: Portrait of Word page thumbnail
+- 003: Feature Article page thumbnail
+- 004: Documentary page thumbnail
+- 005: Reflection page thumbnail
+- 006: Artist Statement page thumbnail
+
+**Content:**
+- Use lorem ipsum for intro paragraph
+- Visual grid should be prominent and inviting
+
+---
+
+### PAGE 1: Portrait of a Word (portrait-of-word.html)
+
+**Title:** "How to Talk to a Wizard"  
+**Subtitle:** "Portrait of a Word Essay"
+
+**Structure:**
+- Splash image below title (full-width or near-full)
+- 5 paragraphs total:
+  - Paragraph 1: Introduction
+  - Paragraph 2: **Long block quote with byline** (formatted distinctly)
+  - Paragraphs 3-4: Body
+  - Paragraph 5: Conclusion
+- 2 additional images professionally integrated into text flow
+- Reflection section at bottom (separated with space/divider)
+
+**Placeholders:**
+- 007: Splash image below title
+- 008: First integrated image (after paragraph 2 or 3)
+- 009: Second integrated image (after paragraph 4)
+
+**Formatting Notes:**
+- Block quote in paragraph 2 should be indented, possibly with left border
+- Byline after block quote in smaller italic text
+- Images should have captions
+- Reflection paragraph clearly separated with visual break
+
+**Text Content:**
+- Lorem ipsum for all 5 paragraphs
+- Lorem ipsum for block quote + byline
+- Lorem ipsum for reflection
+
+---
+
+### PAGE 2: Feature Article (feature-article.html)
+
+**Title:** "Memory Machines and the Human Witness"  
+**Subtitle:** "A Feature Article"
+
+**Structure:**
+- 10 paragraphs total
+- Multiple images embedded throughout (magazine style)
+- Pull quotes (2-3) in larger italic text, positioned to side
+- Citations section at very bottom (clearly separated)
+- Reflection paragraph below article body (before citations)
+
+**Layout Considerations:**
+- Adapt from landscape PDF to vertical web layout
+- **Avoid text-on-image** (hard to manage responsively)
+- Instead: images as separate blocks with captions
+- Pull quotes positioned in margins or between paragraphs
+- Magazine feature aesthetic: elegant, spacious, professional
+
+**Placeholders:**
+- 010: Article splash/hero image
+- 011-020: Images throughout article (10 images total)
+- Use numbered placeholders liberally - better to have too many than too few
+
+**Formatting Notes:**
+- Pull quotes: 1.5-2x body text size, italic, possibly with accent color
+- Image captions in smaller serif font
+- Citations section: smaller text, academic formatting
+- Reflection clearly separated from main article
+
+**Text Content:**
+- Lorem ipsum for all 10 paragraphs
+- Lorem ipsum for 2-3 pull quotes
+- Lorem ipsum for citations (formatted like bibliography)
+- Lorem ipsum for reflection
+
+---
+
+### PAGE 3: Documentary Film (documentary.html)
+
+**Title:** "Memory Machines and the Human Witness"  
+**Subtitle:** "A Multimodal Feature"
+
+**Structure:**
+- Video embed (Frame.io) - large, prominent player
+- Video should be responsive (16:9 aspect ratio maintained)
+- Reflection paragraph below video (clearly separated)
+
+**Placeholders:**
+- 021: Video embed placeholder (show aspect ratio box with "VIDEO EMBED 021" centered)
+- 022: Optional thumbnail or poster frame
+
+**Formatting Notes:**
+- Video player should be the hero element
+- Centered on page with generous margins
+- Reflection below with visual separation
+
+**Text Content:**
+- Lorem ipsum for reflection paragraph
+
+**Technical Notes:**
+- Frame.io embed code will be provided by user
+- Responsive iframe wrapper to maintain aspect ratio
+- Example embed structure:
+```html
+<div class="video-wrapper">
+  <iframe src="FRAME_IO_URL" frameborder="0" allowfullscreen></iframe>
+</div>
+```
+
+---
+
+### PAGE 4: Portfolio Reflection (reflection.html)
+
+**Title:** "A Reflection on Writing about Memory"
+
+**Structure:**
+- Main splash image below title (before essay body)
+- 4 paragraphs total
+- 2-3 pull quotes positioned between paragraphs
+- Magazine layout aesthetic
+
+**Placeholders:**
+- 023: Main splash image
+- 024-026: Optional additional images if desired
+
+**Formatting Notes:**
+- Pull quotes in larger italic text, positioned to side or centered between paragraphs
+- Elegant, readable essay layout
+- Professional reflection aesthetic
+
+**Text Content:**
+- Lorem ipsum for all 4 paragraphs
+- Lorem ipsum for 2-3 pull quotes
+
+---
+
+### PAGE 5: Artist Statement (artist-statement.html)
+
+**Title:** "Artist Statement - Zachary Holbert"
+
+**Structure:**
+- Portrait photo below title (moderate size, not huge - 300-400px wide max)
+- 2-3 paragraphs of artist statement text
+- Clean, simple layout
+
+**Placeholders:**
+- 027: Portrait photo (moderate size)
+
+**Formatting Notes:**
+- Portrait should be elegant and professional, not overwhelming
+- Text should be centered on readability
+- Simple, dignified layout
+
+**Text Content:**
+- Lorem ipsum for artist statement paragraphs
+
+---
+
+## Critical Requirements
+
+### Placeholder System
+**This is essential for user workflow:**
+
+1. **Every media placeholder must be visibly numbered**
+   - Use format: "PLACEHOLDER 001", "PLACEHOLDER 002", etc.
+   - Number should be clearly visible on placeholder image
+   - Use consistent formatting
+
+2. **Placeholder images:**
+   - Generate simple gray rectangles with centered text
+   - Include aspect ratio guidance (e.g., "16:9", "4:3", "portrait")
+   - Include suggested dimensions
+
+3. **Placeholder documentation:**
+   - Create `PLACEHOLDER_GUIDE.md` listing all placeholders with:
+     - Number
+     - Page location
+     - Purpose/description
+     - Suggested dimensions
+     - Aspect ratio
+
+4. **Example placeholder:**
+```html
+<img src="assets/images/placeholders/001.svg" 
+     alt="PLACEHOLDER 001 - Hero image"
+     class="hero-image">
+```
+
+### Responsive Design
+- Mobile-first approach
+- Breakpoints: 375px, 768px, 1024px, 1440px
+- Navigation collapses to hamburger on mobile
+- Images scale appropriately
+- Text remains readable at all sizes
+- Pull quotes reposition sensibly on mobile
+
+### Performance
+- Optimize CSS (single stylesheet)
+- Minimal JavaScript (only if necessary)
+- Fast load times
+- Smooth scrolling
+
+### Accessibility
+- Semantic HTML5
+- Alt text on all images
+- Sufficient color contrast
+- Keyboard navigation support
+- ARIA labels where appropriate
+
+## File Organization
+
+### HTML Files (root level)
+- index.html
+- portrait-of-word.html
+- feature-article.html
+- documentary.html
+- reflection.html
+- artist-statement.html
+
+### CSS
+- `assets/css/style.css` - Single comprehensive stylesheet
+- Organized by: reset, typography, layout, components, pages, responsive
+
+### Images
+- `assets/images/placeholders/` - Numbered placeholder SVGs (001.svg, 002.svg, etc.)
+- `assets/images/family-photos/` - User will add photos here
+- `assets/images/slides/` - User will add slides here
+- `assets/images/process-photos/` - User will add process photos here
+- `assets/images/graphics/` - User will add graphics here
+
+### Text Content
+- `assets/text/*.txt` - User's essay content (not imported yet - using lorem ipsum)
+
+### Documentation
+- `PLACEHOLDER_GUIDE.md` - Master list of all placeholders
+- `STYLE_GUIDE.md` - Design system documentation
+- `README.md` - Project overview and setup instructions
+
+## Content Status
+
+**Current state:** All text content is lorem ipsum placeholders
+
+**User will provide later:**
+- Actual essay text for all pages
+- All images (family photos, slides, process photos, graphics)
+- Video embed code (Frame.io)
+- 150-word reflections for each assignment page
+
+**Your job now:**
+- Build complete structure with lorem ipsum
+- Create professional design system
+- Implement responsive layout
+- Generate numbered placeholder images
+- Document everything clearly
+
+## Development Workflow
+
+1. **Start with structure:** Build all 6 HTML files with semantic markup
+2. **Create stylesheet:** Comprehensive CSS with clean organization
+3. **Generate placeholders:** Create numbered SVG placeholders for all media
+4. **Test responsiveness:** Check all breakpoints
+5. **Document:** Create placeholder guide and style guide
+6. **Polish:** Smooth scroll, transitions, professional details
+
+## Testing Checklist
+
+Before considering complete, verify:
+- [ ] All 6 pages created and linked
+- [ ] Navigation works on all pages
+- [ ] All placeholders numbered and visible
+- [ ] Responsive at all breakpoints
+- [ ] Lorem ipsum in all text positions
+- [ ] Pull quotes styled correctly
+- [ ] Video embed structure in place
+- [ ] Citations section formatted
+- [ ] Reflection paragraphs clearly separated
+- [ ] Visual grid navigation on homepage works
+- [ ] PLACEHOLDER_GUIDE.md created
+- [ ] Clean, validated HTML
+- [ ] Professional documentary aesthetic achieved
+
+## User Communication
+
+When complete, provide:
+1. **Placeholder guide** showing all 027 placeholders and their purposes
+2. **Instructions** for replacing lorem ipsum with actual text
+3. **Instructions** for swapping placeholders with actual images
+4. **Instructions** for adding video embed code
+5. **Any design notes** about color palette, fonts, or layout decisions
+
+## Design References
+
+The user mentioned liking the current style. Key elements to preserve/adapt:
+- Clean, professional documentary aesthetic
+- High contrast, readable typography
+- Magazine-style article layouts
+- Elegant image integration
+- Not overly designed - content-focused
+- Sophisticated but accessible
+
+## Final Notes
+
+- **Port 8080** for development server
+- **Netlify deployment** target (static site, no server-side code)
+- **User is on Mac** using Terminal
+- **User has no media assets yet** - all placeholders for now
+- **User will use terminal commands** to add content to directories
+- **Priority:** Structure and placeholder system so user can easily populate content
+
+Build a portfolio site that feels like a professional documentary filmmaker's portfolio - clean, sophisticated, content-focused, with just enough design flair to feel polished without overwhelming the writing.

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(npm install:*)",
+      "Bash(claude mcp add:*)",
+      "Bash(xargs:*)",
+      "Bash(for file in portrait-of-word.html feature-article.html documentary.html reflection.html artist-statement.html)",
+      "Bash(do sed -i '' 's/<span class=\"\"nav-brand-course\"\">- Eng 1121 CUNY CityTech<\\/span>/<span class=\"\"nav-brand-course\"\">Eng 1121 CUNY CityTech<\\/span>/g' \"$file\")",
+      "Bash(done)",
+      "Bash(pdftotext:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}

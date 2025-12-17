@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Writing Portfolio by Zachary Holbert</title>
+    <meta name="description" content="Reflections on Writing - Technology and Memory">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="nav-brand">Zachary Holbert <span class="nav-brand-course">Eng 1121 CUNY CityTech</span></a>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="portrait-of-word.html">Unit One</a></li>
+                <li><a href="feature-article.html">Unit Two</a></li>
+                <li><a href="documentary.html">Unit Three</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="hero-title">Reflections on Writing about Technology<br>and Human Memory</h1>
+        <p class="hero-subtitle subtitle">A writing portfolio by Zachary Holbert</p>
+    </section>
+
+    <!-- Visual Navigation Grid -->
+    <section class="container">
+        <div class="nav-grid">
+            <!-- Card 1: How to Talk to a Wizard -->
+            <div class="nav-card">
+                <span class="unit-label">Unit One</span>
+                <a href="portrait-of-word.html">
+                    <img src="assets/images/graphics/placeholder 002.jpg" alt="How to Talk to a Wizard" class="nav-card-image">
+                    <div class="nav-card-content">
+                        <h3 class="nav-card-title">How to Talk to a Wizard</h3>
+                        <p class="nav-card-description">An essay on language within the Ham Radio discourse community.</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 2: Feature Article -->
+            <div class="nav-card">
+                <span class="unit-label">Unit Two</span>
+                <a href="feature-article.html">
+                    <img src="assets/images/family-photos/placeholder 003.png" alt="Memory Machines and the Human Witness" class="nav-card-image">
+                    <div class="nav-card-content">
+                        <h3 class="nav-card-title">Memory Machines and the Human Witness</h3>
+                        <p class="nav-card-description">A feature article about human memory and the machines we use to remind ourselves of the past.</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 3: Documentary Film -->
+            <div class="nav-card">
+                <span class="unit-label">Unit Three</span>
+                <a href="documentary.html">
+                    <img src="assets/images/family-photos/placeholder 004.png" alt="Memory Machines and the Human Witness Documentary" class="nav-card-image">
+                    <div class="nav-card-content">
+                        <h3 class="nav-card-title">Memory Machines and the Human Witness</h3>
+                        <p class="nav-card-description">A short documentary about human memory, artificial intelligence and the difference between memory and reminding.</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 4: Portfolio Reflection -->
+            <div class="nav-card">
+                <a href="reflection.html">
+                    <img src="assets/images/family-photos/placeholder 005a.jpg" alt="Portfolio Reflection" class="nav-card-image">
+                    <div class="nav-card-content">
+                        <h3 class="nav-card-title">Portfolio Reflection</h3>
+                        <p class="nav-card-description">A reflection of how I've grown as a writer this year and my writing process.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Zachary Holbert | ENG 1121 Writing Portfolio</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Script -->
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

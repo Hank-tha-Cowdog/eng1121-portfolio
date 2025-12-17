@@ -1,0 +1,23 @@
+Typography
+Headlines & Titles: Playfair Display (Serif)
+Usage: Main headers, quotes, and narrative elements. Provides a classic, editorial, and human "documentary" feel.
+Body Text: Inter (Sans-serif)
+Usage: General paragraphs and UI elements. Clean, neutral, and highly readable.
+Technical & Metadata: JetBrains Mono (Monospace)
+Usage: Dates, file paths, AI prompts, and specs. Evokes a "terminal" or "machine" aesthetic to contrast with the human elements.
+Color Palette
+Background: Film Black (#050505)
+A deep, near-pure black for a cinematic, lights-off viewing experience.
+Text Hierarchy:
+Primary: Zinc-100 (Off-white)
+Secondary: Zinc-400 / Zinc-500 (Muted grey)
+Accents:
+Kodak Red (#E31F26) & Kodak Yellow (#FFC629): Used sparingly to reference branding and film stock.
+Emerald Green: Used for AI/Machine outputs and technical "success" states.
+Visual Theme
+Aesthetic: "Stealth Documentary" / "Archival Futurist."
+UI Style:
+Glassmorphism: Subtle semi-transparent backgrounds with backdrop blurs.
+Floating Elements: Deep, diffuse shadows (shadow-[0_20px_80px_rgba(0,0,0,0.6)]) to make media feel like it is floating in a void.
+Motion: Cinematic reveals (blur-in + slide-up), parallax scrolling on the hero image, and hover-triggered focus effects.
+Print Layout: A dedicated high-contrast (black on white) stylesheet for PDF generation.

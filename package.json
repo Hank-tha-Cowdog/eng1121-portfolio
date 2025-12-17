@@ -1,0 +1,11 @@
+{
+  "name": "eng1121-portfolio",
+  "version": "1.0.0",
+  "description": "Writing Portfolio for ENG 1121",
+  "scripts": {
+    "start": "live-server --port=8080 --open=index.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

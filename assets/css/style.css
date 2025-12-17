@@ -1,0 +1,1064 @@
+/* ========================================
+   ENG 1121 Portfolio - Comprehensive Stylesheet
+   Documentary Portfolio Aesthetic
+   ======================================== */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ========================================
+   1. CSS RESET & BASE STYLES
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #050505;
+    color: #fafafa;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   2. TYPOGRAPHY
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #fafafa;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+.subtitle {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    color: #E31F26;
+    margin: 0;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #fafafa;
+    max-width: 70ch;
+}
+
+/* ========================================
+   3. LAYOUT CONTAINERS
+   ======================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.container-wide {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+/* ========================================
+   4. NAVIGATION
+   ======================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #E31F26; /* Kodak Red */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-brand:hover {
+    color: #fafafa;
+}
+
+.nav-brand-course {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #fafafa;
+    margin-left: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #a1a1aa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #fafafa;
+}
+
+.nav-links a.active {
+    color: #fafafa;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #E31F26;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ========================================
+   5. HERO SECTIONS
+   ======================================== */
+
+.hero {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 2rem 2rem;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #E31F26; /* Kodak Red */
+    margin-bottom: 0;
+    animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
+.hero-intro {
+    max-width: 600px;
+    margin: 0 auto 1rem;
+    animation: fadeInUp 1s ease-out 0.4s backwards;
+}
+
+/* ========================================
+   6. VISUAL NAVIGATION GRID (Homepage)
+   ======================================== */
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    margin: 3rem 0 4rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-card:nth-child(1) { grid-column: 1 / 3; }
+.nav-card:nth-child(2) { grid-column: 3 / 5; }
+.nav-card:nth-child(3) { grid-column: 5 / 7; }
+.nav-card:nth-child(4) { grid-column: 2 / 4; }
+.nav-card:nth-child(5) { grid-column: 4 / 6; }
+
+.nav-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 100px rgba(227, 31, 38, 0.3);
+}
+
+.nav-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.nav-card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Adjust Artist Statement card image position */
+.nav-card:nth-child(5) .nav-card-image {
+    object-position: center 30%;
+}
+
+.nav-card-content {
+    padding: 1.5rem;
+}
+
+.nav-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #fafafa;
+}
+
+.nav-card-description {
+    font-size: 0.9rem;
+    color: #a1a1aa;
+    line-height: 1.6;
+}
+
+.unit-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #E31F26;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.35rem 1rem;
+    z-index: 10;
+    text-align: center;
+}
+
+/* ========================================
+   7. ARTICLE LAYOUTS
+   ======================================== */
+
+.article-header {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.article-splash {
+    width: 100%;
+    max-width: 1400px;
+    margin: 2rem auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+}
+
+.article-splash img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Smaller splash image (half size, 16:9 aspect ratio) */
+.article-splash-small {
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+}
+
+.article-splash-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.article-body {
+    max-width: 720px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.article-body p {
+    font-size: 1.125rem;
+    line-height: 1.9;
+    margin-bottom: 2rem;
+}
+
+/* Assignment Introduction Card */
+.assignment-intro {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #E31F26;
+    border-radius: 4px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.assignment-intro h4 {
+    color: #E31F26;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.assignment-intro p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #d4d4d8;
+    margin-bottom: 0;
+}
+
+.assignment-intro ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.assignment-intro li {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #d4d4d8;
+    margin-bottom: 0.75rem;
+}
+
+.assignment-intro li:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   8. PULL QUOTES
+   ======================================== */
+
+.pull-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fafafa;
+    margin: 3rem 0;
+    padding: 2rem 3rem;
+    position: relative;
+    text-align: center;
+}
+
+.pull-quote::before {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    color: #E31F26;
+    font-family: 'Playfair Display', serif;
+}
+
+.pull-quote-side {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: #fafafa;
+    margin: 2rem 0;
+    padding-left: 2rem;
+    border-left: 3px solid #E31F26;
+}
+
+/* ========================================
+   9. BLOCK QUOTES
+   ======================================== */
+
+blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: #fafafa;
+    margin: 2.5rem 0;
+    padding: 2rem 3rem;
+    border-left: 4px solid #E31F26;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+}
+
+.byline {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #E31F26;
+    margin-top: 1rem;
+    text-align: right;
+}
+
+/* ========================================
+   10. IMAGES & CAPTIONS
+   ======================================== */
+
+.article-image {
+    margin: 3rem 0;
+    max-width: 100%;
+}
+
+.article-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.image-caption {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #fafafa;
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+/* Glassmorphism Photo Caption Card (Hero Images) */
+.image-caption-card {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.image-caption-card .caption-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    color: #10b981; /* Emerald-500 */
+    margin-bottom: 0.25rem;
+}
+
+.image-caption-card .caption-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: #047857; /* Emerald-700 */
+}
+
+/* Gradient Overlay Caption (Archival Grid) */
+.image-caption-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 2rem 1.5rem 1rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: #ffffff;
+}
+
+.image-wide {
+    max-width: 1200px;
+    width: 100%;
+    margin: 3rem auto;
+}
+
+.image-inline {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.portrait-image {
+    max-width: 400px;
+    margin: 2rem auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ========================================
+   11. TECHNICAL METADATA STYLING
+   ======================================== */
+
+.tech-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #71717a; /* Zinc-500 */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pulse-dot {
+    width: 6px;
+    height: 6px;
+    background: #E31F26; /* Kodak Red */
+    border-radius: 50%;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* ========================================
+   12. VIDEO EMBED
+   ======================================== */
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio - locks aspect ratio before load */
+    height: 0;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 3rem auto;
+    border-radius: 0; /* No border radius for cinematic feel */
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6); /* Heavy diffuse shadow - floating projection screen effect */
+    background: #050505;
+    border: none;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    transform: translate(-49.3%, -59.2%) scale(1.185);
+    border: none;
+    outline: none;
+    display: block;
+}
+
+.video-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a1a;
+    color: #a1a1aa;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.5rem;
+}
+
+/* ========================================
+   12. REFLECTION SECTIONS
+   ======================================== */
+
+.reflection {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.reflection h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #fafafa;
+}
+
+.reflection p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #d4d4d8;
+}
+
+/* ========================================
+   13. CITATIONS
+   ======================================== */
+
+.citations {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.citations h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.citations ul {
+    list-style: none;
+    padding: 0;
+}
+
+.citations li {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    color: #d4d4d8;
+    padding-left: 1.5rem;
+    text-indent: -1.5rem;
+}
+
+/* ========================================
+   14. FOOTER
+   ======================================== */
+
+footer {
+    margin-top: 6rem;
+    padding: 3rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #71717a;
+    max-width: 100%;
+}
+
+/* ========================================
+   15. ANIMATIONS
+   ======================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* ========================================
+   16. UTILITY CLASSES
+   ======================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-accent {
+    color: #E31F26;
+}
+
+.text-secondary {
+    color: #a1a1aa;
+}
+
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+.mb-4 { margin-bottom: 4rem; }
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+.mt-4 { margin-top: 4rem; }
+
+/* ========================================
+   17. RESPONSIVE DESIGN
+   ======================================== */
+
+/* Desktop: 1440px+ (default styles above) */
+
+/* Laptop: 1024px - 1439px */
+@media (max-width: 1439px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .container-wide {
+        max-width: 1200px;
+    }
+}
+
+/* Tablet: 768px - 1023px */
+@media (max-width: 1023px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .nav-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .pull-quote {
+        font-size: 1.5rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .article-body {
+        padding: 0 1.5rem;
+    }
+}
+
+/* Mobile: 375px - 767px */
+@media (max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .container,
+    .container-narrow,
+    .container-wide {
+        padding: 0 1.25rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    /* Mobile Navigation */
+    .nav-links {
+        position: fixed;
+        top: 73px;
+        right: -100%;
+        width: 100%;
+        max-width: 300px;
+        height: calc(100vh - 73px);
+        background: rgba(5, 5, 5, 0.98);
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        transition: right 0.3s ease;
+        align-items: flex-start;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Grid layouts */
+    .nav-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .nav-card-image {
+        height: 200px;
+    }
+
+    /* Typography adjustments */
+    p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .article-body p {
+        font-size: 1rem;
+    }
+
+    .pull-quote {
+        font-size: 1.25rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .pull-quote::before {
+        font-size: 3rem;
+    }
+
+    .pull-quote-side {
+        font-size: 1.125rem;
+        padding-left: 1rem;
+    }
+
+    blockquote {
+        font-size: 1.05rem;
+        padding: 1.5rem 1.25rem;
+    }
+
+    .article-body {
+        padding: 0 1.25rem;
+    }
+}
+
+/* Small Mobile: 375px and below */
+@media (max-width: 374px) {
+    html {
+        font-size: 13px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .container,
+    .container-narrow,
+    .container-wide {
+        padding: 0 1rem;
+    }
+}
+
+/* ========================================
+   18. PRINT STYLES
+   ======================================== */
+
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    header,
+    footer,
+    .hamburger,
+    .nav-links {
+        display: none;
+    }
+
+    .article-body {
+        max-width: 100%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: black;
+    }
+
+    p {
+        color: black;
+    }
+
+    .pull-quote,
+    blockquote {
+        color: black;
+        border-left-color: #333;
+    }
+}
+
+/* ========================================
+   PHOTO GRID GALLERY & LIGHTBOX
+   ======================================== */
+
+.photo-grid {
+    margin: 4rem 0;
+    padding: 3rem 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(227, 31, 38, 0.3);
+}
+
+.grid-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover .grid-image {
+    transform: scale(1.05);
+}
+
+/* Lightbox Modal */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 5, 5, 0.95);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    color: #fafafa;
+    font-size: 3rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 10000;
+    line-height: 1;
+}
+
+.lightbox-close:hover {
+    color: #E31F26;
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .lightbox-close {
+        top: 1rem;
+        right: 1rem;
+        font-size: 2.5rem;
+    }
+}

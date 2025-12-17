@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Machines and the Human Witness - Documentary</title>
+    <meta name="description" content="A Multimodal Feature Documentary">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="nav-brand">Zachary Holbert <span class="nav-brand-course">Eng 1121 CUNY CityTech</span></a>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portrait-of-word.html">Unit One</a></li>
+                <li><a href="feature-article.html">Unit Two</a></li>
+                <li><a href="documentary.html" class="active">Unit Three</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <h1>Memory Machines and the Human Witness</h1>
+        <p class="subtitle">A Multimodal Documentary</p>
+    </section>
+
+    <!-- Video Embed Section -->
+    <section class="container">
+        <div class="video-wrapper">
+            <!-- Frame.io video embed -->
+            <iframe
+                src="https://f.io/M1KWV81F?hide_sidebar=true&hide_ui=true&title=0&byline=0"
+                style="border: none; outline: none;"
+                frameborder="0"
+                scrolling="no"
+                allowfullscreen
+                allow="autoplay; fullscreen; picture-in-picture">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Article Body -->
+    <article class="article-body">
+        <!-- Assignment Introduction -->
+        <div class="assignment-intro">
+            <h4>About This Documentary</h4>
+            <p>
+                This is a multimodal documentary film that incorporates archival footage, ai generated video and experimentation to explore the relationship between photographs and memory. I used generative AI video in order to evoke an emotional response from the audience. This emotional response was an effort to prove that images, especially the moving image, has the unique power to catalyze a human response to other human beings in an image, synthetic or not. The audience for this film are the technologically curious, documentarians, archivists, and anyone who holds on to the idea that photographs of lost loved ones are sacred artifcacts.
+            </p>
+        </div>
+
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Zachary Holbert | ENG 1121 Writing Portfolio</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Script -->
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

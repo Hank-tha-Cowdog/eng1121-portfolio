@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Statement - Zachary Holbert</title>
+    <meta name="description" content="Artist Statement">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="nav-brand">Zachary Holbert <span class="nav-brand-course">Eng 1121 CUNY CityTech</span></a>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portrait-of-word.html">Unit One</a></li>
+                <li><a href="feature-article.html">Unit Two</a></li>
+                <li><a href="documentary.html">Unit Three</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+                <li><a href="artist-statement.html" class="active">Artist Statement</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <h1>Artist Statement</h1>
+    </section>
+
+    <!-- Portrait Photo -->
+    <div class="article-splash article-splash-small" style="max-width: 625px;">
+        <img src="assets/images/graphics/placeholder 027.jpg" alt="Portrait of Zachary Holbert">
+    </div>
+
+    <!-- Article Body -->
+    <article class="article-body">
+        <!-- Paragraph 1 -->
+        <p>
+            My work exists at the intersection of memory and technology. As a colorist, restoration artist, and technical consultant, I spend my days breathing life back into archival footage and ensuring that contemporary stories are told with visual clarity and intention. Each frame I restore is a small act of preservation, a way of pulling the past forward into the present so that it might speak to us again.
+        </p>
+
+        <!-- Paragraph 2 -->
+        <p>
+            The bulk of my practice focuses on documentary filmmaking, where archival restoration becomes a form of historical witness. Using machine learning models, Python-based image processing tools, and custom workflows, I work to recover what time and deterioration have tried to erase. This portfolio explores the tension I've discovered in this work: while technology gives us unprecedented power to restore and even resurrect images from the past, these tools can only index what once existed. The human stories, the context, the lived experience—these require something beyond algorithms.
+        </p>
+
+        <!-- Paragraph 3 -->
+        <p>
+            Beyond restoration, I develop image processing software and teach color grading, color management, and cinematography at universities and arts institutions nationwide. In sharing these technical skills, I hope to pass on not just the mechanics of the craft, but an understanding of how we use technology to shape memory itself. Every color grade, every restoration decision, every custom pipeline I build is an interpretation—a way of asking how we want to remember, and what we choose to preserve for those who come after us.
+        </p>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Zachary Holbert | ENG 1121 Writing Portfolio</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Script -->
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
